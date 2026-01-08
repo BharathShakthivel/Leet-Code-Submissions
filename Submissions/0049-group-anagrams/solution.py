@@ -10,3 +10,10 @@ class Solution:
         
 
         return list(freq_dict.values())
+        
+        #Dealing with soring method
+        # ans = defaultdict(list)
+        # for s in strs:
+        #     key = "".join(sorted(s))
+        #     ans[key].append(s)
+        # return list(ans.values())
