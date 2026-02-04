@@ -9,24 +9,62 @@ class Solution:
         #                 if out not in res:
         #                     res.append(out)
         # return res
+        # res = []
+        # nums.sort()
+        # for i, a in enumerate(nums):
+        #     if a > 0:
+        #         break
+        #     if i > 0 and a == nums[i-1]:
+        #         continue
+        #     l = i +1
+        #     r = len(nums)-1
+        #     while l<r:
+        #         three_sum = a + nums[l] + nums[r]
+        #         if three_sum > 0:
+        #             r-=1
+        #         elif three_sum <0:
+        #             l+=1
+        #         else:
+        #             res.append([a,nums[l],nums[r]])
+        #             l+=1
+        #             while nums[l] == nums[l-1] and l!=r:
+        #                 l+=1
+        # return res
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         res = []
         nums.sort()
-        for i, a in enumerate(nums):
-            if a > 0:
+        for i,a in enumerate(nums):
+            if a>0:
                 break
-            if i > 0 and a == nums[i-1]:
+            if i > 0 and nums[i] == nums[i-1]:
                 continue
-            l = i +1
-            r = len(nums)-1
+            
+            l,r = i+1,len(nums)-1
             while l<r:
                 three_sum = a + nums[l] + nums[r]
-                if three_sum > 0:
+                if three_sum >0:
                     r-=1
-                elif three_sum <0:
+                elif three_sum<0:
                     l+=1
                 else:
                     res.append([a,nums[l],nums[r]])
                     l+=1
-                    while nums[l] == nums[l-1] and l!=r:
+                    while nums[l] == nums[l-1] and l<r:
                         l+=1
         return res
