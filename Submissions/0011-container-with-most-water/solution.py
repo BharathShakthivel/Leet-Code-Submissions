@@ -24,14 +24,59 @@ class Solution:
 
         # Optimal Solution
 
-        l,r = 0,len(height)-1
+        # l,r = 0,len(height)-1
+        # res = 0
+        # while l<r:
+        #      cur_max = min(height[l],height[r]) * (r-l)
+        #      if cur_max>res:
+        #         res=cur_max
+        #      if height[l]<height[r]:
+        #         l+=1
+        #      else:
+        #         r-=1
+        # return res
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         res = 0
+        l,r = 0,len(height)-1
         while l<r:
-             cur_max = min(height[l],height[r]) * (r-l)
-             if cur_max>res:
-                res=cur_max
-             if height[l]<height[r]:
+            cur_max = min(height[l],height[r]) * (r-l)
+            if cur_max>res:
+                res = cur_max
+            if height[l]<height[r]:
                 l+=1
-             else:
+            else:
                 r-=1
         return res
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
