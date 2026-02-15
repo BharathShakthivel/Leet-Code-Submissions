@@ -3,7 +3,9 @@ class Solution:
         #Brute Force - Time - O(n), Space - O(1)
         # nums.sort()
         # return nums[0]
+        
         # Min index Method 
+        
         l,r = 0, len(nums)-1
         while l<r:
             m = (l+r)//2
@@ -12,6 +14,6 @@ class Solution:
             else:
                 r = m
 
-        if nums[0]<nums[l]:
+        if nums[0]<nums[r]:
             return nums[0]
         return nums[l] 
