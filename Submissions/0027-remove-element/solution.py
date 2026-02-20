@@ -13,11 +13,21 @@ class Solution:
         #         left+=1
         #         right-=1
         # return left
-        k = 0
 
+        # 'k' acts as a "write-pointer" to track the position of the next valid element.
+        # It also serves as the count of elements not equal to 'val'.
+        k = 0
+        
+        # 'i' is the "scan-pointer" that iterates through every element in the list.
         for i in range(len(nums)):
+            # If the current element is NOT the one we want to remove:
             if nums[i] != val:
+                # Copy the valid element to the 'k-th' index.
+                # This effectively overwrites any 'val' instances found earlier.
                 nums[k] = nums[i]
+                
+                # Move the write-pointer forward to the next available slot.
                 k += 1
         
+        # After the loop, the first 'k' elements contain all non-'val' numbers.
         return k
