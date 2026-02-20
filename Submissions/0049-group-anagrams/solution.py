@@ -11,7 +11,7 @@ class Solution:
 
         # return list(freq_dict.values())
         
-        # Dealing with soring method
+        # Dealing with sorting method
         ans = defaultdict(list)
         for s in strs:
             key = "".join(sorted(s))
