@@ -20,7 +20,7 @@ class Solution:
         #We need to count the frequency of the element using the HashMap
         count = {}
         freq = [[] for i in range(len(nums)+1)]
-        # We are creating the list within the list to put the elements which corresponds to size of the array. Let us say if they array has size 5 and all the values in the original nums array, our freq list would be having all the distinct items in the inner list of the index 4 of the outer list.
+        # We are creating the list within the list to put the elements which corresponds to size of the array. Let us say if the array has size 5 and all the values in the original nums array, our freq list would be having all the distinct items in the inner list of the index 4 of the outer list.
 
         # Now we loop through the count,
         for n in nums:
