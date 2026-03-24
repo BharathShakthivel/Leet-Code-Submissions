@@ -4,10 +4,11 @@ class Solution:
         Do not return anything, modify s in-place instead.
 
         """
-        ptr_1 = 0
-        ptr_2 = len(s)-1
-        while ptr_1 < ptr_2:
-            s[ptr_1],s[ptr_2] = s[ptr_2],s[ptr_1]
-            ptr_1+=1
-            ptr_2-=1
+        l =0
+        r = len(s)-1
+        while l<r:
+            s[l],s[r] = s[r],s[l]
+            l+=1
+            r-=1
+        
         
