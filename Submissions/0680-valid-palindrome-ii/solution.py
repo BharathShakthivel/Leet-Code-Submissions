@@ -9,7 +9,7 @@ class Solution:
         # if rev == s:
         #     return True
         # for i in rev:
-        #     if Positive(rev.replace(i,"",1)) :
+        #     if Positive(rev.replace(i,"",1)):
         #         return True
         # return False
 
