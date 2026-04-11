@@ -8,7 +8,7 @@ class Solution:
         # #  The base case is when the len of original list becomes zero we append a copy to our res
         # # We pop the last element from current solution and we insert back the element to corresponding iteration.
 
-        # #  The ultimate idea is that once the element is picked it is automatically neglected in the next itwration.
+        # #  The ultimate idea is that once the element is picked it is automatically neglected in the next iteration.
         # def backtrack(nums):
         #     if len(nums) == 0:
         #         res.append(sol[:])
