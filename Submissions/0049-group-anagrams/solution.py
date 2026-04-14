@@ -11,9 +11,36 @@ class Solution:
 
         # return list(freq_dict.values())
         
-        # Dealing with sorting method
-        ans = defaultdict(list)
+        # # Dealing with sorting method
+        # ans = defaultdict(list)
+        # for s in strs:
+        #     key = "".join(sorted(s))
+        #     ans[key].append(s)
+        # return list(ans.values())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        # Practise
+        my_dict = defaultdict(list)
         for s in strs:
-            key = "".join(sorted(s))
-            ans[key].append(s)
-        return list(ans.values())
+            key = [0] * 26
+            for i in s:
+                key[ord("a")-ord(i)]+=1
+            my_dict[tuple(key)].append(s)
+        return list(my_dict.values())
+
