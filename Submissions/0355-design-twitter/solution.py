@@ -1,5 +1,45 @@
 class Twitter:
     from collections import defaultdict
+    '''
+        ## 🧠 Mental Model: “Merge K Tweet Stacks”
+
+        * Each user’s tweets = a **stack (newest on top)**
+        * You follow multiple users → you have **K stacks**
+        * Goal = get **top 10 most recent tweets across all stacks**
+
+        ## ⚙️ How it works
+
+        1. Put the **top tweet of each stack** into a heap
+        2. Repeat:
+
+        * Pop the **most recent tweet**
+        * Add it to result
+        * Push the **next tweet from that same user**
+
+        ## 🔑 One-line intuition
+
+        👉 *“Always keep one tweet per user in the heap, and refill from the same user after popping.”*
+
+
+        ## 📌 Why it’s efficient
+
+        * Heap size = number of followees (not total tweets)
+        * Only processes up to **10 tweets**
+        * Equivalent to **merge k sorted lists**
+
+
+        ## 🧩 Trigger to recognize this pattern
+
+        If you see:
+
+        * Multiple sorted lists
+        * Need top K results
+
+        👉 Think: **Heap + incremental merge**
+
+
+
+    '''
     def __init__(self):
         self.followMap = defaultdict(set)
         self.count = 0
