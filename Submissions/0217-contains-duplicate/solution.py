@@ -5,7 +5,7 @@ class Solution:
         # else:
         #     return True
         
-        # Hashset approach Time - O(n) and Space - O(n)
+        # # Hashset approach Time - O(n) and Space - O(n)
         hashset = set()
         for i in nums:
             if i in hashset:
@@ -13,3 +13,26 @@ class Solution:
             hashset.add(i)
         return False
        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
