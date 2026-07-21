@@ -11,16 +11,16 @@ class Solution:
         #      read+=1
         # return write+1
 
-        l = 1
-        r = 1
-        while r != len(nums):
-            if nums[r] != nums[r-1]:
-                nums[l] = nums[r]
-                l+=1
-                r+=1
-            else:
-                r+=1
-        return l
+        # l = 1
+        # r = 1
+        # while r != len(nums):
+        #     if nums[r] != nums[r-1]:
+        #         nums[l] = nums[r]
+        #         l+=1
+        #         r+=1
+        #     else:
+        #         r+=1
+        # return l
 
 
         # write_pointer = 0
@@ -33,3 +33,28 @@ class Solution:
         #         pass
         #     read_pointer+=1
         # return write_pointer+1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        j = 1
+        for i in range(1,len(nums)):
+            if nums[i] != nums[i-1]:
+                nums[j] = nums[i]
+                j+=1
+        return j
