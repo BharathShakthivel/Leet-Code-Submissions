@@ -5,7 +5,8 @@ class MyHashMap:
 
     def put(self, key: int, value: int) -> None:
         if key in self.my_list:
-          self.my_list.update({key:value})
+        #   self.my_list.update({key:value}) 
+            self.my_list[key] = value
         else:
           self.my_list[key] = value
 
