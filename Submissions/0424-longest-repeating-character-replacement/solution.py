@@ -32,21 +32,21 @@ class Solution:
         # Step 7: Return res
         
         # EvenBetter Approach
-        # hashmap = {}
-        # l = 0
-        # res = 0
-        # max_freq = 0
-        # for r in range(len(s)):
-        #     hashmap[s[r]] = 1 + hashmap.get(s[r],0)
-        #     window_length = r - l + 1
-        #     max_freq = max(max_freq,hashmap[s[r]])
+        hashmap = {}
+        l = 0
+        res = 0
+        max_freq = 0
+        for r in range(len(s)):
+            hashmap[s[r]] = 1 + hashmap.get(s[r],0)
+            window_length = r - l + 1
+            max_freq = max(max_freq,hashmap[s[r]])
 
-        #     while window_length - max_freq > k:
-        #             hashmap[s[l]] -= 1
-        #             l+=1
-        #             window_length = r - l +1
-        #     res = max(res,window_length)
-        # return res       
+            while window_length - max_freq > k:
+                    hashmap[s[l]] -= 1
+                    l+=1
+                    window_length = r - l +1
+            res = max(res,window_length)
+        return res       
         
 
 
